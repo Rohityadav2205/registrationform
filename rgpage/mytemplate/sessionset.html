@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="background-color: grey;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8" style="margin-top: 10px; text-shadow:10px 10px 10px rgb(223, 217, 217) ;">
+                <center>
+                <h1>Session Set</h1>
+                </center>
+            </div>
+
+            <div class="col-md-2"></div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+        <form method="post">
+             {% csrf_token %}
+            <div class="text-center">
+                <!-- {{user_name}} -->
+
+                <div class="form-group">
+                    <label for="username" style="color: pink;">User Name:</label>
+                    <input type="text" class="form-control" style="margin-top:10px;box-shadow:10px 10px 10px rgb(27, 27, 27) ;" name="username" value="{{username}}" placeholder="User Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" style="color: pink;">password:</label>
+                    <input type="password" class="form-control" style="margin-top:10px;box-shadow:10px 10px 10px rgb(31, 19, 19);" name="password" value="{{password}}" placeholder="password" required>
+                </div>
+
+                <input type="submit" class="btn btn-primary" style="margin-top:10px;box-shadow:10px 10px 10px rgb(230, 223, 223);" value="submit">
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+
+
+        <br>
+    </div>
+    </div>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
