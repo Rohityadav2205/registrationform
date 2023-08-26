@@ -75,6 +75,7 @@ def login(request):
 
 def home(request):
     currentuser=request.session.get("username")
+
     if currentuser is None:
         return  redirect("/login")
 
@@ -88,7 +89,14 @@ def logout(request):
         pass
     # return HttpResponse("User logout")
 
-    return  redirect("/registration")
+    return  redirect("/")
+
+def base(request):
+    return render(request,"base.html")
+
+
+def afterlogin(request):
+    return render(request,"afterlogin.html")
 
 # session used in django
 

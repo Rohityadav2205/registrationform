@@ -1,18 +1,23 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}registration Page{% endblock %}
+
+{% block content %}
+<!--<!DOCTYPE html>-->
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Submit</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body style="background-color: grey;">
+<body style="background-color: khaki;">
 <div class="container">
 
 
     <div class="row">
         <div class="col-md-2"></div>
 
-        <div class="col-md-8" style="margin-top: 10px; text-shadow:10px 10px 10px rgb(223, 217, 217) ;">
+        <div class="col-md-8" style="margin-top: 10px; text-shadow:10px 10px 10px rgb(114, 3, 3) ;">
             <center>
                 <h1>Registration form</h1>
             </center>
@@ -34,25 +39,25 @@
                     <!-- {{user_name}} -->
 
                     <div class="form-group">
-                        <label for="username" style="color: rgb(171, 228, 188);">User Name:</label>
+                        <label for="username" style="color: rgb(247, 139, 15);">User Name:</label>
                         <input type="text" class="form-control"
                                style="margin-top:10px;box-shadow:10px 10px 10px rgb(9, 34, 13) ;" name="username"
                                value="{{username}}" placeholder="User Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="name" style="color: rgb(14, 70, 37);"> Name:</label>
+                        <label for="name" style="color: rgb(3, 58, 26);"> Name:</label>
                         <input type="text" class="form-control"
                                style="margin-top:10px;box-shadow:10px 10px 10px rgb(15, 15, 15);" name="name"
                                value="{{name}}" placeholder="Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="password" style="color: rgb(218, 233, 154);">password:</label>
+                        <label for="password" style="color: rgb(139, 10, 10);">password:</label>
                         <input type="password" class="form-control"
                                style="margin-top:10px;box-shadow:10px 10px 10px rgb(32, 58, 3);" name="password"
                                value="{{password}}" placeholder="password" required>
                     </div>
                     <div class="form-group">
-                        <label for="Confirmpassword" style="color: rgb(241, 178, 84);"> confirmpassword:</label>
+                        <label for="Confirmpassword" style="color: rgb(105, 20, 243);"> confirmpassword:</label>
                         <input type="password" class="form-control" value="{{confirmpassword}}"
                                style="margin-top:10px;box-shadow:10px 10px 10px rgb(6, 23, 39);" name="confirmpassword"
                                placeholder="Confirm pass." required>
@@ -87,7 +92,7 @@
         <div class="col-md-8">
             <center>
 
-             <a href="/login" class="btn btn-success mt-5"  style="margin-top:10px;box-shadow:10px 10px 10px rgb(15, 15, 15);"><h2> User login </h2></a>
+<!--             <a href="/login" class="btn btn-success mt-5"  style="margin-top:10px;box-shadow:10px 10px 10px rgb(15, 15, 15);"><h2> User login </h2></a>-->
 
                 </center>
         </div>
@@ -98,3 +103,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+{% endblock %}
